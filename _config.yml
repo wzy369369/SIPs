@@ -13,57 +13,51 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ethereum Improvement Proposals
+title: Symblox Improvement Proposals
 description: >-
-  Ethereum Improvement Proposals (EIPs) describe standards for the Ethereum
-  platform, including core protocol specifications, client APIs, and contract
-  standards.
-url: "https://eips.ethereum.org"
-twitter_username: ethereum
-github_username:  ethereum
+    Symblox Improvement Proposals (SIPs) describe standards for the Symblox
+    platform, including core protocol specifications, client APIs, and contract
+    standards.
+url: "https://sips.symblox.io"
+repository: symblox/SIPs
+twitter_username: symbloxdefi
+github_username: symblox
 header_pages:
- - all.html
- - core.html
- - networking.html
- - interface.html
- - erc.html
- - meta.html
- - informational.html
+    - all.html
+    - core.html
+    - networking.html
+    - interface.html
+    - erc.html
+    - meta.html
+    - informational.html
 twitter:
-  card: summary
-  username: ethereum
+    card: summary
+    username: symbloxdefi
 
 # Build settings
-highlighter: rouge
 markdown: kramdown
 theme: minima
-kramdown:
-  parse_block_html: false
-  # This is the default, but be explicit as some EIPs depend on it
-  auto_ids: true
-  # This is to ensure more determistic behaviour
-  auto_id_stripping: true
-  syntax_highlighter: rouge
+plugins:
+    - jekyll-seo-tag
 
 permalink: /:slug
 
 defaults:
-  -
-    scope:
-      path: "EIPS"
-    values:
-      layout: "eip"
+    - scope:
+          path: "sips"
+      values:
+          layout: "sip"
 
 exclude:
-  - .github
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - eip-template.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
-  - README.md
+    - .github
+    - Gemfile
+    - Gemfile.lock
+    - node_modules
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
+    - sip-template.md
+    - ISSUE_TEMPLATE.md
+    - PULL_REQUEST_TEMPLATE.md
+    - README.md
