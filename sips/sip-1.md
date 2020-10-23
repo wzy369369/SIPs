@@ -11,23 +11,19 @@ created: 2020-10-21
 
 SIP stands for Symblox Improvement Proposal, it has been adapted from the EIP & SIP (Ethereum Improvement Proposal & Synthetix Improvement Proposal). The purpose of this process is to ensure changes to Symblox are transparent and well governed. An SIP is a design document providing information to the Symblox community about a proposed change to the system. The author is responsible for building consensus within the community and documenting dissenting opinions.
 
-## What is an SCCP?
+## SIP Rationale
 
-SCCP stands for Symblox Configuration Change Proposal. SCCP's are documents for making a case for modifying one of the system configuration variables. The intent is to provide a clear and detailed history behind each configuration change and the rationale behind it at the time it was implemented. The author of the document is responsible for building consensus within the community and documenting dissenting opinions.
-
-## SIP & SCCP Rationale
-
-We intend SIPs and SCCPs to be the primary mechanisms for proposing new features, collecting community input on an issue, and for documenting the design decisions for changes to Symblox. Because they are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
+We intend SIPs to be the primary mechanisms for proposing new features, collecting community input on an issue, and for documenting the design decisions for changes to Symblox. Because they are maintained as text files in a versioned repository, their revision history is the historical record of the feature proposal.
 
 It is highly recommended that a single SIP contain a single key proposal or new idea. The more focused the SIP, the more successful it is likely to be.
 
-A SIP or SCCP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement.
+A SIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement.
 
 ## SIP Work Flow
 
 Parties involved in the process are the _author_, the [_SIP editors_](#sip-editors), the [Symblox Core Contributors] and the Symblox community.
 
-:warning: Before you begin, vet your idea, this will save you time. Ask the Symblox community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your SIP or SCCP is [the Symblox Discord].
+:warning: Before you begin, vet your idea, this will save you time. Ask the Symblox community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your SIP is [the Symblox Discord].
 
 Your role as the champion is to write the SIP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea. Following is the process that a successful SIP will move along:
 
@@ -46,7 +42,7 @@ Each status change is requested by the SIP author and reviewed by the SIP editor
 
 ## What belongs in a successful SIP?
 
-Each SIP or SCCP should have the following parts:
+Each SIP should have the following parts:
 
 -   Preamble - RFC 822 style headers containing metadata about the SIP, including the SIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details.
 -   Simple Summary - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the SIP.
@@ -106,7 +102,7 @@ if the email address is not given.
 
 #### `discussions-to` header
 
-While an SIP is in WIP or Proposed status, a `discussions-to` header will indicate the URL at [research.symblox.io](https://research.symblox.io/) where the SIP is being discussed.
+While an SIP is in WIP or Proposed status, a `discussions-to` header will indicate the URL at [Symblox SIPs telegram]: https://t.me/SymbloxSIP where the SIP is being discussed.
 
 #### `created` header
 
@@ -128,9 +124,7 @@ SIPs may include auxiliary files such as diagrams. Such files must be named SIP-
 
 The current SIP editors are
 
-` * Ken Nguyen (@SYMBLOXMadMen)`
-
-` * Maximillian W. (@maximillianw)`
+` * Symblox Dev (@symblox)`
 
 ## SIP Editor Responsibilities
 
@@ -162,16 +156,15 @@ The SIP document was derived heavily from the EIP Ethereum Improvement Proposal 
 
 June 10, 2019: SIP 1 has been drafted and submitted as a PR.
 
-See [the revision history for further details](https://github.com/symblox.io/), which is also available by clicking on the History button in the top right of the SIP.
+See [the revision history for further details](https://github.com/symblox/), which is also available by clicking on the History button in the top right of the SIP.
 
 ### Bibliography
 
-[symblox telegram]: https://t.me/SymbloxSIP
+[symblox sips telegram]: https://t.me/SymbloxSIP
 [pull request]: https://github.com/symblox.io/SIPs/pulls
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [bitcoin's bip-0001]: https://github.com/bitcoin/bips
 [python's pep-0001]: https://www.python.org/dev/peps/
-[symblox engineering team]: https://github.com/orgs/Symblox.io/people
 
 ## Copyright
 
