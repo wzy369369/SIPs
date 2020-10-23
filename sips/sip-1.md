@@ -124,7 +124,9 @@ SIPs may include auxiliary files such as diagrams. Such files must be named SIP-
 
 The current SIP editors are
 
-` * Symblox Dev (@symblox)`
+-   [Symblox Dev](https://github.com/symblox)
+
+-   [Ken Nguyen](https://github.com/hungypoo)
 
 ## SIP Editor Responsibilities
 
@@ -144,8 +146,6 @@ Once the SIP is ready for the repository, the SIP editor will:
 
 -   Send a message back to the SIP author with the next step.
 
-Many SIPs are written and maintained by developers with write access to the EVM codebase. The SIP editors monitor SIP changes, and correct any structure, grammar, spelling, or markup mistakes we see.
-
 The editors don't pass judgment on SIPs. We merely do the administrative & editorial part.
 
 ## History
@@ -154,17 +154,18 @@ The SIP document was derived heavily from the EIP Ethereum Improvement Proposal 
 
 -   _"This document (EIP) was derived heavily from [Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."_ \*
 
-June 10, 2019: SIP 1 has been drafted and submitted as a PR.
+October 21, 2020: SIP 1 has been drafted and submitted.
 
 See [the revision history for further details](https://github.com/symblox/), which is also available by clicking on the History button in the top right of the SIP.
 
-### Bibliography
+## Bibliography
 
-[symblox sips telegram]: https://t.me/SymbloxSIP
-[pull request]: https://github.com/symblox.io/SIPs/pulls
-[markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[bitcoin's bip-0001]: https://github.com/bitcoin/bips
-[python's pep-0001]: https://www.python.org/dev/peps/
+-   Symblox SIPs Telegram: https://t.me/SymbloxSIP
+-   Pull Request: https://github.com/symblox.io/SIPs/pulls
+-   Markdown: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+-   Bitcoin's bip-0001: https://github.com/bitcoin/bips
+-   Python's pep-0001: https://www.python.org/dev/peps/
+-   Ethereum's eip-1: https://github.com/ethereum/eips
 
 ## Copyright
 
