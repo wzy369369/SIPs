@@ -24,15 +24,12 @@ twitter_username: symbloxdefi
 github_username: symblox
 header_pages:
     - all.html
-    - core.html
-    - networking.html
-    - interface.html
-    - erc.html
-    - meta.html
-    - informational.html
+
 twitter:
     card: summary
     username: symbloxdefi
+
+google_analytics: G-KZWF2Y19VL
 
 # Build settings
 markdown: kramdown
