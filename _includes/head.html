@@ -8,20 +8,8 @@
         else %}{{ site.homeMetaTitle }}{% endif %}
     </title>
     {%- seo -%} <link rel="stylesheet" href="{{ "/assets/main.css" |
-    relative_url }}" />
+    absolute_url }}" />
     <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
-    <script
-        type="text/javascript"
-        src="//translate.google.cn/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                { pageLanguage: "en" },
-                "google_translate_element"
-            );
-        }
-    </script>
     {%- feed_meta -%} {%- if jekyll.environment == 'production' and
     site.google_analytics -%} {%- include google-analytics.html -%} {%- endif
     -%}
