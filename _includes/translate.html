@@ -1,24 +1,12 @@
 <script type="text/javascript">
-    // function googleTranslateElementInit() {
-    //     new google.translate.TranslateElement(
-    //         { pageLanguage: "en" },
-    //         "google_translate_element"
-    //     );
-    // }
     function translate() {
         target = document.getElementById("targetLanguage").value;
         siteUrl = window.location.href;
         siteUrl = "https://sips.symblox.io";
         console.log(siteUrl);
-        // window.location.replace(
-        //     `http://webtrans.yodao.com/webTransPc/index.html?from=en&to=zh-CHS&type=1&url=${encodeURI(
-        //         siteUrl
-        //     )}`
-        window.location.replace(
-            `http://fanyi.baidu.com/transpage?from=en&to=${target}&source=url&render=1&query=${encodeURI(
-                siteUrl
-            )}`
-        );
+        window.location.href = `http://fanyi.baidu.com/transpage?from=en&to=${target}&source=url&render=1&query=${encodeURI(
+            siteUrl
+        )}`;
     }
 </script>
 <div
@@ -26,7 +14,11 @@
     id="translate_element"
     style="float: right; margin-left: 1em; line-height: 54px"
 >
-    <select id="targetLanguage" onchange="translate()">
+    <select
+        id="targetLanguage"
+        style="margin: 10px"
+        onblur="window.translate()"
+    >
         <option value="">选择语言</option>
         <option value="zh">中文（简体）</option>
         <option value="sq">阿尔巴尼亚语</option>
