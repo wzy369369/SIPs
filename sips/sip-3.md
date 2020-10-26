@@ -31,17 +31,55 @@ Right now, there are 2 issues with the current design of Symblox. Firstly, there
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
-We will create a new Smart Contract called pVault, which will be used to pool all VLX tokens together. Once a user sends VLX tokens to the pVault, she gets the same amount of pVLX, meaning pooled VLX, in return. The token pVLX will always be 1:1 pegged to VLX, and can be converted back to VLX anytime when a user sends pVLX back to pVault.
+### pVault
 
-Once pVault receives VLX tokens, it sends all VLX tokens on its balance to VLX masternodes to earn the staking rewards. When pVault gets the rewards, it converts VLX to pVLX, and stakes pVLX to Symblox swap pair SYX/pVLX, which is created separately, to earn SYX rewards.
+We create a new Smart Contract called `pVault`, which is used to pool all VLX tokens together. There are 4 major functionalities for pVault.
 
-Everyday, pVault randomly selects a winner from all the stakeholders of pVault, and sends all SYX rewards to the winner.
+-   Accept users' deposit and withdrawal of VLX tokens;
+
+-   Stake users' deposited VLX to Velas Masternodes to earn VLX rewards;
+
+-   Stake VLX rewards to Symblox to earn SYX rewards;
+
+-   Randomly select a winning account from all stakeholders of pVault every certain period of time (e.g., every 24 hours), and send all SYX rewards generated during that period to that account.
+
+### pVLX Token
+
+The `pVLX` is a standard ERC20/VRC20 token, which is 1-to-1 pegged x to VLX.
+
+#### Token Minting
+
+When a user deposits VLX tokens to pVault, pVault mints the equivilant amount of pVLX token (as its 1:1 pegged to VLX) and sends them back to the user. It in turn, leaves the pre-defined `reserve_ratio` percent of VLX tokens in the vault, and sends the rest to Velas masternodes to earn VLX staking rewards.
+
+When pVault gets the staking rewards, it mints the equivilant amount pVLX tokens, and stakes them to Symblox swap pool SYX/pVLX, which is created separately, to earn SYX rewards.
+
+#### Token Burning
+
+pVLX tokens can be converted back to VLXs anytime when a user withdraws VLX by sending pVLX tokens back to pVault. Then they will be burnt and the equivilant amount of VLX will be sent the back to the user. The pVault may act accordingly based on if it has enough VLX on the current balance. More details on this later.
+
+### Awarding the Winner
+
+For certain period of time, e.g., everday, pVault randomly selects a winner from all the pVLX holders. The random seed number is generated from RANDAO, which is the random number generator provided by VELAS blockchain. Then, pVault sends all SYX rewards generated during that period to the winner.
+
+### pVLX and VLX exchange
+
+VLX token holders can get pVLX simply by depositing VLX to the pVault.
+
+The pVLX token holder has two options to convert pVLX back to VLX.
+
+-   One way is that he can send pVLX to pVault directly to exchange back to VLX. pVault reserves a pre-defined `reserve_ratio` percent of VLXs for the exchange. If there are enough VLX in the vault, the user can get them backs immediately. Or, the user either has to wait for more VLX be deposited to the vault, or he can resort to the second option.
+
+-   Another way to exchange pVLX back to VLX is thru pVLX/VLX swap on Symblox.
 
 ### Solidity
 
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+
+The idea of no-loss prize game was inspired by premium bonds; the idea is that it encourages savers to deposit money into their accounts by giving them the ability to win prizes. In the UK, the government-run savings program has attracted \$100 billion in savings from one third of the population.
+
+There's another project, called [PoolTogether](https://pooltogether.com/), also implemented the similar idea on Ethereum.
 
 ## Test Cases
 
